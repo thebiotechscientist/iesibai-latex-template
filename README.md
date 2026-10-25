@@ -36,15 +36,18 @@ Paquete de estilo en LaTeX para la redacción de documentos académicos del IES 
 - Compilador **XeLaTeX**.
 - Procesador de bibliografía **Biber**.
 - Opcional *Zotero* para la gestión de referencias.
+- Tener isntalado en el sistema las fuentes Arial, Helvetica y Noto Sans
 
 ## Uso rápido
 1. Clona este repositorio o descarga el archivo `iesibai-template.sty`.
 2. Coloca `iesibai-template.sty` en la misma carpeta que tu archivo principal (trabajo, tesis, etc) `.tex`.
 3. En el preámbulo de tu documento, incluye:
    ```latex
-   \documentclass{article}
-   \usepackage{iesibai}
-   \addbibresource{referencias.bib}
+   \documentclass[12pt, letterpaper]{article}
+   \usepackage{iesibai-template}
+   % ...
+   % demás código de paquetes y preámbulo
+   % ...
    ```
 ## Instalación desde CTAN
 - Desde el instalador/gestor de paquetes de su distribución instalada (MikTeX, TeXLive, MacTeX, etc.)
