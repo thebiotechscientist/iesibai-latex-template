@@ -1,8 +1,8 @@
-# Plantilla y Paquete LaTeX - IES IBAI (`iesibai-template.sty`)
+# Plantilla y Paquete LaTeX - IESIBAI
 
 <div align="center">
 
-# 📦 iesibai-template (`iesibai-template.sty`)
+# 📦 `iesibai-template.sty`
 **Plantilla Institucional y Paquete de Estilo LaTeX para IESIBAI** /  
 **Identidad Visual y Formato Académico Estandarizado**
 
