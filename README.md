@@ -93,10 +93,10 @@ Paquete de estilo en LaTeX para la redacción de documentos académicos del IES 
   linkcolor=iesblueprimary,
   urlcolor=iesaccent,
   citecolor=iesblueprimary,
-  pdftitle={Proyecto de Investigación Cuantitativa - HERO|QR Suite},
-  pdfauthor={Francisco Javier Morales Martínez},
-  pdfsubject={Metodología Cuantitativa - Maestría en Educación},
-  pdfkeywords={Educación, Metodología Cuantitativa, OMR, QR, IESIBAI}
+  pdftitle={Proyecto de Investigación},
+  pdfauthor={Autor del PDF generedo},
+  pdfsubject={Nombre de la nateria},
+  pdfkeywords={Educación, Metodología, IESIBAI}
 }
 
 % 2. Si para algún trabajo no deseas que se genere la portada, descomenta esto:
