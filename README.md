@@ -1,4 +1,4 @@
-# Plantilla y Paquete LaTeX - IESIBAI
+# Plantilla y Paquete LaTeX - IESIBAI (No Oficial)
 
 <div align="center">
 
@@ -19,7 +19,7 @@
 ---
 
 ## Descripción
-Paquete de estilo en LaTeX para la redacción de documentos académicos del IES IBAI, configurado con soporte para **XeLaTeX** e identidades visuales institucionales. El paquete `iesibai-template` proporciona macros, configuración de formato y elementos de portada para la generación de documentos académicos e institucionales ajustados a los requisitos del IESIBAI.
+Paquete no oficial de estilo en LaTeX para la redacción de documentos académicos del IES IBAI, configurado con soporte para **XeLaTeX** e identidades visuales institucionales. El paquete `iesibai-template` proporciona macros, configuración de formato y elementos de portada para la generación de documentos académicos e institucionales ajustados a los requisitos del IESIBAI.
 
 ## Contenido del paquete
 - `iesibai-template.sty`: Archivo de estilo principal.
