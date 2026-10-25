@@ -1,18 +1,32 @@
-# Plantilla y Paquete LaTeX - IES IBAI (`iesibai.sty`)
+# Plantilla y Paquete LaTeX - IES IBAI (`iesibai-template.sty`)
 
-**Versión:** 1.0.0  
-**Fecha:** 2026-09-27  
-**Autor:** TheBiotechScientist  
-**Licencia:** LPPL v1.3c
+<div align="center">
+
+# 📦 iesibai-template (`iesibai-template.sty`)
+**Plantilla Institucional y Paquete de Estilo LaTeX para IESIBAI** /  
+**Identidad Visual y Formato Académico Estandarizado**
+
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/thebiotechscientist/iesibai-latex-template)
+[![LaTeX](https://img.shields.io/badge/LaTeX-XeLaTeX%20%7C%20LuaLaTeX-4A154B?logo=latex&logoColor=white)](https://www.tug.org/xetex/)
+[![CTAN](https://img.shields.io/badge/CTAN-iesibai--template-green.svg)](https://ctan.org/pkg/iesibai)
+[![License](https://img.shields.io/badge/License-LPPL%20v1.3c-teal.svg)](https://www.latex-project.org/lppl.txt)
+[![Author](https://img.shields.io/badge/author-TheBiotechScientist-181717?logo=github&logoColor=white)](https://github.com/thebiotechscientist)
+
+*Macros, estilos tipográficos, configuración de portadas automatizadas y paletas cromáticas institucionales para el Instituto de Estudios Superiores de la Red Iberoamericana de Academias de Investigación (IESIBAI).*
+
+</div>
+
+---
 
 ## Descripción
-Paquete de estilo en LaTeX para la redacción de documentos académicos del IES IBAI, configurado con soporte para **XeLaTeX**, formato **APA 7ma edición** e identidades visuales institucionales. El paquete `iesibai` proporciona macros, configuración de formato y elementos de portada para la generación de documentos académicos e institucionales ajustados a los requisitos del IESIBAI.
+Paquete de estilo en LaTeX para la redacción de documentos académicos del IES IBAI, configurado con soporte para **XeLaTeX** e identidades visuales institucionales. El paquete `iesibai-template` proporciona macros, configuración de formato y elementos de portada para la generación de documentos académicos e institucionales ajustados a los requisitos del IESIBAI.
 
 ## Contenido del paquete
-- `iesibai.sty`: Archivo de estilo principal.
+- `iesibai-template.sty`: Archivo de estilo principal.
 - `iesibai-doc.pdf`: Documentación oficial compilada.
 - `iesibai-doc.tex`: Código fuente de la documentación.
 - `ejemplo.tex`: Documento de ejemplo mínimo.
+- `ejemplo.pdf`: Documento de ejemplo mínimo compilado.
 - `README.md`: Readme con esta información.
 - `LICENSE`: Licencia del paquete.
 - `assets/`: Recursos gráficos predeterminados (logos y fondos).
@@ -24,8 +38,8 @@ Paquete de estilo en LaTeX para la redacción de documentos académicos del IES 
 - Opcional *Zotero* para la gestión de referencias.
 
 ## Uso rápido
-1. Clona este repositorio o descarga el archivo `iesibai.sty`.
-2. Coloca `iesibai.sty` en la misma carpeta que tu archivo principal (trabajo, tesis, etc) `.tex`.
+1. Clona este repositorio o descarga el archivo `iesibai-template.sty`.
+2. Coloca `iesibai-template.sty` en la misma carpeta que tu archivo principal (trabajo, tesis, etc) `.tex`.
 3. En el preámbulo de tu documento, incluye:
    ```latex
    \documentclass{article}
@@ -34,7 +48,7 @@ Paquete de estilo en LaTeX para la redacción de documentos académicos del IES 
    ```
 ## Instalación desde CTAN
 - Desde el instalador/gestor de paquetes de su distribución instalada (MikTeX, TeXLive, MacTeX, etc.)
-- Desde el repositorio de *CTAN*, buscar el paquete `iesibai.sty` y descargar.
+- Desde el repositorio de *CTAN*, buscar el paquete `iesibai-template.sty` y descargar.
 - Seguir las instruciones para descarga y correcta isntalación de un paquete desde CTAN.
 
 ## Características
@@ -47,20 +61,39 @@ Paquete de estilo en LaTeX para la redacción de documentos académicos del IES 
 
 ```latex
 \documentclass[12pt,letterpaper]{report}
-\usepackage{iesibai}
+\usepackage{iesibai-template}
 
 % --- EJEMPLOS DE USO OPCIONALES ---
 % 1. Para cambiar solo algunos valores de la portada, descomenta esto:
 \iesibaisetup{
+    logo={assets/logo_iesibai.png},
+    fondo={assets/fondo_portada_redes_2.jpeg},
     institucion={Instituto de Estudios\\ Superiores de la\\ Red Iberoamericana de\\ Academias de Investigación},
     campus={Campus Virtual Hidalgo},
     programa={Maestría en Educación},
     materia={Tecnología e Innovación I},
     subtitulo={Un subtítulo interesante},
-    alumno={TheBiotechScientist},
-    profesor={Dr. IESIBAI},
+    trabajo={Nombre del Producto de Investigación},
+    alumno={Nombre del Alumno},
+    profesor={Dr. TheBiotechScientist},
     ubicacion={San Luis Potosí, México},
     fecha={Septiembre, 2026}
+}
+
+% Para los enlaces de la tabla de contenidos, figuras, tablas, links
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+%   plainpages=false,
+%   pdfpagelabels=true,
+  colorlinks=true,
+  linkcolor=iesblueprimary,
+  urlcolor=iesaccent,
+  citecolor=iesblueprimary,
+  pdftitle={Proyecto de Investigación Cuantitativa - HERO|QR Suite},
+  pdfauthor={Francisco Javier Morales Martínez},
+  pdfsubject={Metodología Cuantitativa - Maestría en Educación},
+  pdfkeywords={Educación, Metodología Cuantitativa, OMR, QR, IESIBAI}
 }
 
 % 2. Si para algún trabajo no deseas que se genere la portada, descomenta esto:
@@ -70,19 +103,26 @@ Paquete de estilo en LaTeX para la redacción de documentos académicos del IES 
 
 \tableofcontents
 
-\chapter{Primer capítulo}
-Texto del primer capítulo
+\chapter{Título del Primer capítulo}
 
 \section{Primera sección del capítulo 1}
+Texto de la primera sección
 
-\chapter{Segundo capítulo}
-Aquí va el segundo capítulo
+\subsection{Sub-sección de la sección 1}
+Texto de la primera sub-sección
 
-\secction{Primera sección del capitulo 2}
+
+
+\chapter{Título del Segundo capítulo}
+
+\section{Primera sección del capitulo 2}
+Texto de la sección 1
+
+\subsection{Una sub-sección}
+Texto de la sub-sección 1 
 
 \chapter{Tercer capítulo}
-Y seguimos
-
+Y seguimos con un nuevo capítulo y secciones.
 
 \end{document}
 ```
