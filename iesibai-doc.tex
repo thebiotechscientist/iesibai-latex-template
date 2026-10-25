@@ -17,7 +17,7 @@
 \setmainfont{Arial}
 \setsansfont{Noto Sans}
 
-% --- Colores Institucionales Reutilizados de iesibai.sty ---
+% --- Colores Institucionales Reutilizados de iesibai-template.sty ---
 \definecolor{iesblue}{HTML}{0F2C59}
 \definecolor{iesblueprimary}{HTML}{1A365D}
 \definecolor{iesgray}{HTML}{4A5568}
@@ -29,7 +29,7 @@
     linkcolor=iesblueprimary,
     urlcolor=iesaccent,
     citecolor=iesgray,
-    pdftitle={Documentación del paquete iesibai},
+    pdftitle={Documentación del paquete iesibai-template},
     pdfauthor={F. Javier Morales M. (TheBiotechScientist)}
 ]{hyperref}
 
@@ -55,7 +55,7 @@
 \newcommand{\key}[1]{\texttt{#1}}
 
 \title{%
-    \Huge \textbf{\color{iesblueprimary}El paquete \pkg{iesibai}}\\[0.3em]
+    \Huge \textbf{\color{iesblueprimary}El paquete \pkg{iesibai-template}}\\[0.3em]
     \large Plantilla \LaTeX \ (No Oficial) para el \textbf{IESIBAI}\\[0.2em]
     \small Manual de Usuario y Especificación Técnica
 }
@@ -69,7 +69,7 @@
 \maketitle
 
 \begin{abstract}
-El paquete \pkg{iesibai} proporciona macros, estilos tipográficos, paletas de color y una interfaz clave-valor (\emph{key-value}) para estandarizar la presentación gráfica de trabajos académicos e institucionales en el \textbf{Instituto de Estudios Superiores de la Red Iberoamericana de Academias de Investigación (IESIBAI)}.
+El paquete \pkg{iesibai-template} proporciona macros, estilos tipográficos, paletas de color y una interfaz clave-valor (\emph{key-value}) para estandarizar la presentación gráfica de trabajos académicos e institucionales en el \textbf{Instituto de Estudios Superiores de la Red Iberoamericana de Academias de Investigación (IESIBAI)}.
 \end{abstract}
 
 \tableofcontents
@@ -78,7 +78,7 @@ El paquete \pkg{iesibai} proporciona macros, estilos tipográficos, paletas de c
 \vspace{0.8cm}
 
 \section{Introducción}
-El objetivo principal de \pkg{iesibai} es automatizar la creación de portadas, la configuración de márgenes y el formato tipográfico de los documentos oficiales del instituto. Con este paquete, el autor puede concentrarse en la redacción del contenido mientras el sistema mantiene la coherencia gráfica requerida.
+El objetivo principal de \pkg{iesibai-template} es automatizar la creación de portadas, la configuración de márgenes y el formato tipográfico de los documentos oficiales del instituto. Con este paquete, el autor puede concentrarse en la redacción del contenido mientras el sistema mantiene la coherencia gráfica requerida.
 
 \section{Requisitos del Sistema y Compilación}
 Este paquete hace uso intensivo de la gestión moderna de fuentes mediante \pkg{fontspec}. Por lo tanto, \textbf{es obligatorio compilar el documento con XeLaTeX}.
@@ -92,7 +92,7 @@ El sistema operativo debe contar con las siguientes familias tipográficas insta
 \end{itemize}
 
 \subsection{Paquetes Dependientes}
-El paquete \pkg{iesibai} carga automáticamente los siguientes paquetes:
+El paquete \pkg{iesibai-template} carga automáticamente los siguientes paquetes:
 \begin{itemize}
     \item \pkg{geometry}: Configurado para hoja tamaño carta (\texttt{letterpaper}) con márgenes de $2.5\ \text{cm}$.
     \item \pkg{babel}: Idioma español con soporte para tablas (\texttt{es-tabla}) y renombrado de índice a "`Contenido"'.
@@ -122,7 +122,7 @@ Asigna valores a las variables institucionales. Se recomienda colocar este coman
 \end{lstlisting}
 
 \subsection{Generación y Control de Portada}
-Por defecto, \pkg{iesibai} \textbf{genera automáticamente la portada} al ejecutar \texttt{\textbackslash begin\{document\}} utilizando las variables declaradas.
+Por defecto, \pkg{iesibai-template} \textbf{genera automáticamente la portada} al ejecutar \texttt{\textbackslash begin\{document\}} utilizando las variables declaradas.
 
 \begin{itemize}
     \item \cmd{sinportadaiesibai}: Desactiva la generación automática de la portada. Debe colocarse en el preámbulo si se desea omitirla.
@@ -190,7 +190,7 @@ A continuación se presenta un código funcional completo:
 
 \begin{lstlisting}
 \documentclass[12pt]{article}
-\usepackage{iesibai}
+\usepackage{iesibai-template}
 
 \iesibaisetup{
     materia   = {Tecnología e Innovación I},

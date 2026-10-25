@@ -1,5 +1,5 @@
 \documentclass[12pt,letterpaper]{report}
-\usepackage{iesibai}
+\usepackage{iesibai-template}
 
 % --- EJEMPLOS DE USO OPCIONALES ---
 % 1. Para cambiar solo algunos valores de la portada, descomenta esto:
@@ -11,10 +11,27 @@
     programa={Maestría en Educación},
     materia={Tecnología e Innovación I},
     subtitulo={Un subtítulo interesante},
+    trabajo={Nombre del Producto de Investigación},
     alumno={Nombre del Alumno},
     profesor={Dr. TheBiotechScientist},
     ubicacion={San Luis Potosí, México},
     fecha={Septiembre, 2026}
+}
+
+% Para los enlaces de la tabla de contenidos, figuras, tablas, links
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+%   plainpages=false,
+%   pdfpagelabels=true,
+  colorlinks=true,
+  linkcolor=iesblueprimary,
+  urlcolor=iesaccent,
+  citecolor=iesblueprimary,
+  pdftitle={Proyecto de Investigación Cuantitativa - HERO|QR Suite},
+  pdfauthor={Francisco Javier Morales Martínez},
+  pdfsubject={Metodología Cuantitativa - Maestría en Educación},
+  pdfkeywords={Educación, Metodología Cuantitativa, OMR, QR, IESIBAI}
 }
 
 % 2. Si para algún trabajo no deseas que se genere la portada, descomenta esto:
@@ -24,20 +41,25 @@
 
 \tableofcontents
 
-\chapter{Primer capítulo}
-Texto del primer capítulo
+\chapter{Título del Primer capítulo}
 
 \section{Primera sección del capítulo 1}
+Texto de la primera sección
 
-\chapter{Segundo capítulo}
-Aquí va el segundo capítulo
+\subsection{Sub-sección de la sección 1}
+Texto de la primera sub-sección
+
+
+
+\chapter{Título del Segundo capítulo}
 
 \section{Primera sección del capitulo 2}
+Texto de la sección 1
+
+\subsection{Una sub-sección}
+Texto de la sub-sección 1 
 
 \chapter{Tercer capítulo}
 Y seguimos con un nuevo capítulo y secciones.
-
-
-
 
 \end{document}
